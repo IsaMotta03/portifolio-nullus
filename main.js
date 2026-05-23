@@ -49,25 +49,19 @@ window.addEventListener('scroll', () => {
 });
 
 /* ── Menu Hamburguer Mobile Funcional ── */
-const hmbBtn = document.getElementById('botao-hamburguer');
-const menuM  = document.getElementById('menu-mobile');
-const linksM = document.querySelectorAll('.menu-mobile a');
+const botao = document.getElementById("botao-hamburguer");
+const menu = document.getElementById("menu-mobile");
 
-if (hmbBtn && menuM) {
-  hmbBtn.addEventListener('click', () => {
-    const aberto = menuM.classList.toggle('open');
-    hmbBtn.classList.toggle('open');
-    hmbBtn.setAttribute('aria-expanded', String(aberto));
-  });
+botao.addEventListener("click", () => {
 
-  linksM.forEach(link => {
-    link.addEventListener('click', () => {
-      hmbBtn.setAttribute('aria-expanded', 'false');
-      menuM.classList.remove('open');
-      hmbBtn.classList.remove('open');
-    });
-  });
-}
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+    menu.style.position = "fixed";
+  }
+
+});
 
 /* ── canvas de partículas (não espero que ninguem entenda mexi tanto nisso que nem eu entendo mais) ── */
 const canvasElem = document.getElementById('tela-particulas');
