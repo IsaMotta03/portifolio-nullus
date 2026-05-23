@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nullus Portfolio</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400..800&display=swap"
+    rel="stylesheet">
+
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <i id="ponteiro-cursor" aria-hidden="true"></i>
-  <i id="anel-cursor"     aria-hidden="true"></i>
+  <i id="anel-cursor" aria-hidden="true"></i>
   <canvas id="tela-particulas" aria-hidden="true"></canvas>
 
   <header class="cabecalho-site">
     <nav class="container nav-interna" aria-label="Navegação principal">
-      
+
       <a href="#inicio" class="nav-logo" aria-label="Nullus — início">
         <img src="images/nullus-logo.svg" alt="Nullus Logo" width="120" height="38">
       </a>
@@ -32,18 +35,12 @@
         <li><a href="#contato" class="nav-botao-chamada">Contato</a></li>
       </ul>
 
-      <button 
-        class="botao-menu-hamburguer" 
-        id="botao-hamburguer"
-        aria-controls="menu-mobile" 
-        aria-expanded="false" 
-        aria-label="Abrir menu de navegação"
-      >
-        <b></b><b></b><b></b>
+      <button class="botao-menu-hamburguer" id="botao-hamburguer">
+        <img src="images/menu.png" alt="menu" id="barrinha-menu">
       </button>
 
       <aside class="menu-mobile" id="menu-mobile">
-        <nav aria-label="Navegação mobile">
+        <nav aria-label="Navegação mobile" id="navegacao-mobile">
           <a href="#sobre">Sobre</a>
           <a href="#servicos">Serviços</a>
           <a href="#projetos">Projetos</a>
@@ -55,10 +52,10 @@
   </header>
 
   <main>
-    
+
     <section id="inicio" aria-labelledby="titulo-hero">
       <article class="container grade-hero">
-        
+
         <section class="conteudo-hero">
           <header>
             <p class="subtitulo-tecnico-contato">Tecnologia · Performance · Inovação</p>
@@ -68,21 +65,21 @@
               <strong class="linha-texto"><em>máximo</em></strong>
             </h1>
           </header>
-          
+
           <p class="descricao-hero">
             Soluções digitais que partem do nulo e entregam velocidade máxima —
             sem interferências, sem limites. Desenvolvimento front-end de alta
             performance com foco em UX e resultados reais.
           </p>
-          
+
           <nav class="botoes-acao-hero" aria-label="Ações da introdução">
             <a href="#projetos" class="botao botao-primario">Ver projetos →</a>
             <a href="#contato" class="botao botao-fantasma">Fale conosco</a>
           </nav>
-          
+
           <dl class="bloco-estatisticas">
             <dt class="sr-only">Estatisticas</dt>
-            
+
             <dd class="item-numero"><strong>X+</strong> <small>Projetos</small></dd>
             <dd class="item-numero"><strong>X+</strong> <small>Anos exp.</small></dd>
             <dd class="item-numero"><strong>100%</strong> <small>Entregues</small></dd>
@@ -94,7 +91,7 @@
             <i class="anel-orbita anel-1"></i>
             <i class="anel-orbita anel-2"></i>
             <i class="anel-orbita anel-3"></i>
-            
+
             <picture class="centro-orbe">
               <img src="images/nullus-icon.svg" alt="Nullus Icon" width="180" height="180">
             </picture>
@@ -116,7 +113,7 @@
         <li>Responsive Design</li>
         <li>UI/UX</li>
         <li>Figma</li>
-        
+
         <li>Performance</li>
         <li>Acessibilidade</li>
         <li>Design Systems</li>
@@ -145,8 +142,10 @@
             </h2>
           </header>
           <p class="texto-destaque">
-            A Nullus nasce do conceito de fótons — partículas de carga nula que atingem velocidade máxima sem resistência. Nossa abordagem une precisão técnica, design de alto nível e foco absoluto em performance.
-            Acreditamos que o "us" — nós — dentro do "null" é o que transforma zero em resultado. Cada projeto é construído do absoluto início com intenção, código limpo e experiências que surpreendem.
+            A Nullus nasce do conceito de fótons — partículas de carga nula que atingem velocidade máxima sem
+            resistência. Nossa abordagem une precisão técnica, design de alto nível e foco absoluto em performance.
+            Acreditamos que o "us" — nós — dentro do "null" é o que transforma zero em resultado. Cada projeto é
+            construído do absoluto início com intenção, código limpo e experiências que surpreendem.
           </p>
           <ul class="lista-skills">
             <li>HTML5 Semântico</li>
@@ -176,7 +175,8 @@
                 <i class="icone-servico" aria-hidden="true">🚀</i>
                 <h3>Websites de Alta Performance</h3>
               </header>
-              <p>Interfaces ultrarrápidas construídas com código limpo, otimizadas para o Google Core Web Vitals e focadas em conversão.</p>
+              <p>Interfaces ultrarrápidas construídas com código limpo, otimizadas para o Google Core Web Vitals e
+                focadas em conversão.</p>
             </article>
           </li>
 
@@ -187,7 +187,8 @@
                 <i class="icone-servico" aria-hidden="true">📱</i>
                 <h3>Desenvolvimento Responsivo</h3>
               </header>
-              <p>Layouts inteligentes que se adaptam fluidamente a qualquer tamanho de ecrã, garantindo a mesma experiência premium do desktop ao mobile.</p>
+              <p>Layouts inteligentes que se adaptam fluidamente a qualquer tamanho de ecrã, garantindo a mesma
+                experiência premium do desktop ao mobile.</p>
             </article>
           </li>
 
@@ -198,7 +199,8 @@
                 <i class="icone-servico" aria-hidden="true">🎨</i>
                 <h3>UI/UX para Sistemas</h3>
               </header>
-              <p>Criação de protótipos modernos no Figma focados em usabilidade, arquitetura da informação e componentização limpa.</p>
+              <p>Criação de protótipos modernos no Figma focados em usabilidade, arquitetura da informação e
+                componentização limpa.</p>
             </article>
           </li>
         </ul>
@@ -219,7 +221,8 @@
           <li>
             <article class="card-projeto">
               <figure class="figura-projeto">
-                <img src="images/telinha.svg" alt="Ilustração de uma tela de computador com gráficos e código, representando um projeto de desenvolvimento web">
+                <img src="images/telinha.svg"
+                  alt="Ilustração de uma tela de computador com gráficos e código, representando um projeto de desenvolvimento web">
               </figure>
               <div class="conteudo-projeto">
                 <figcaption class="badge-projeto">Em destaque</figcaption>
@@ -239,14 +242,14 @@
 
     </section>
 
-       <section id="projetos" aria-labelledby="titulo-projetos">
+    <section id="projetos" aria-labelledby="titulo-projetos">
       <article class="container">
 
         <ul class="lista-projetos-links" role="list">
-          
+
           <li class="item-projeto-link">
             <span class="numero-id">001</span>
-            
+
             <section class="bloco-info-projeto">
               <header class="header-projeto-item">
                 <h3 class="nome-projeto-item">VAGGO</h3>
@@ -258,13 +261,13 @@
                 <span class="tag-link">JS</span>
               </footer>
             </section>
-            
+
             <a href="#" class="seta-link" aria-label="Ver projeto VAGGO">↗</a>
           </li>
 
           <li class="item-projeto-link">
             <span class="numero-id">002</span>
-            
+
             <section class="bloco-info-projeto">
               <header class="header-projeto-item">
                 <h3 class="nome-projeto-item">CUIDA+</h3>
@@ -276,7 +279,7 @@
                 <span class="tag-link">JS</span>
               </footer>
             </section>
-            
+
             <a href="#" class="seta-link" aria-label="Ver projeto CUIDA+">↗</a>
           </li>
 
@@ -284,9 +287,9 @@
       </article>
     </section>
 
-      <section id="contato" aria-labelledby="titulo-contato">
+    <section id="contato" aria-labelledby="titulo-contato">
       <article class="container grade-contato">
-        
+
         <section class="bloco-texto-contato">
           <header>
             <p class="subtitulo-tecnico-contato">Contato</p>
@@ -295,9 +298,10 @@
             </h2>
           </header>
           <p class="paragrafo-contato">
-            Tem um projeto em mente? Queremos ouvir. A Nullus está disponível para novos desafios, colaborações e conversas sobre tecnologia.
+            Tem um projeto em mente? Queremos ouvir. A Nullus está disponível para novos desafios, colaborações e
+            conversas sobre tecnologia.
           </p>
-          
+
           <ul class="lista-contatos-links" role="list">
             <li>
               <a href="mailto:contato@nullus.dev" aria-label="Enviar e-mail para contato@nullus.dev">
@@ -323,14 +327,14 @@
         <form id="form-contato-web" novalidate class="formulario-contato">
           <fieldset class="campos-formulario">
             <legend>Formulário de contacto direto</legend>
-            
+
             <section class="grupo-linha-inputs">
               <p>
                 <label for="nome">NOME*</label>
                 <input type="text" id="nome" required placeholder="Seu nome completo">
                 <output class="msg-erro" id="erro-nome">Por favor, preencha este campo.</output>
               </p>
-              
+
               <p>
                 <label for="email">E-MAIL*</label>
                 <input type="email" id="email" required placeholder="seu@email.com">
@@ -379,4 +383,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
