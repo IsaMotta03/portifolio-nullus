@@ -193,6 +193,19 @@ aside {
   margin-left: 30px;
   margin-top: 20px;
 }
+/* ícone menu escondido */
+.botao-menu-hamburguer {
+  display: none;
+}
+
+/* ícone menu aparece apenas no celular */
+@media (max-width: 768px) {
+
+  .botao-menu-hamburguer {
+    display: block;
+  }
+
+}
 
 /* ── 05. Hero Section ── */
 #inicio {
