@@ -430,17 +430,18 @@ aside {
 }
 
 .centro-orbe img { 
+  transform: scale(1.35);
   filter: drop-shadow(0 0 24px rgba(168, 85, 247, 0.6)); 
 }
 
 .anel-orbita { 
   position: absolute; 
   border-radius: 50%; 
-  border: 1px solid rgba(168, 85, 247, 0.1); 
+  border: 1px solid var(--cor-borda); 
   animation: pulsacao-anel 4s ease-in-out infinite; 
 }
 
-.anel-1 { width: 110%; height: 110%; top: -5%; left: -5%; animation-delay: 0s; }
+.anel-1 { width: 110%; height: 110%; top: -5%; left: -5%; animation-delay: 0s; border-color: var(--cor-marca-roxo) }
 .anel-2 { width: 130%; height: 130%; top: -15%; left: -15%; animation-delay: 0.8s; }
 .anel-3 { width: 155%; height: 155%; top: -27.5%; left: -27.5%; animation-delay: 1.6s; }
 
@@ -795,7 +796,7 @@ aside {
   letter-spacing: -1px;
 }
 .titulo-secao-contato span {
-  color: #a277ff; 
+  color:var(--cor-marca-roxo); 
 }
 .paragrafo-contato {
   font-family: 'DM Mono', monospace;
@@ -890,7 +891,7 @@ aside {
 }
 .formulario-contato button {
   width: 100%;
-  background-color: #a277ff;
+  background-color: var(--cor-marca-roxo);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -903,7 +904,7 @@ aside {
   box-shadow: 0 4px 20px rgba(162, 119, 255, 0.2);
 }
 .formulario-contato button:hover {
-  background-color: #b48fff;
+  background-color: var(--cor-marca-roxo-hover);
   transform: translateY(-1px);
 }
 .msg-erro { display: none; }
@@ -911,7 +912,7 @@ aside {
 /* ── 11. Rodapé (Footer) ── */
 .rodape-site {
   padding: 60px 0;
-  background-color: #0b0813;
+ background-color: var(--cor-fundo-secundario);
   border-top: 1px solid #130f21;
 }
 .rodape-conteudo {
@@ -922,7 +923,7 @@ aside {
 .rodape-conteudo small {
   font-family: 'DM Mono', monospace;
   font-size: 0.85rem;
-  color: #312843; 
+  color: var(--cor-texto-secundario); 
 }
 .rodape-conteudo nav ul {
   list-style: none;
@@ -944,8 +945,10 @@ aside {
 
 /* ── 12. Media Queries & Responsividade ── */
 @media (max-width: 720px) {
+  .nav-lista { display: none; }
+  .botao-menu-hamburguer { display: flex;}
   .grade-sobre, .grade-contato { grid-template-columns: 1fr; gap: 40px; }
-  .card-imagem-sobre { aspect-ratio: 4 / 3; }
+  .card-imagem-sobre { aspect-ratio: 4 / 4; }
   .grade-servicos { grid-template-columns: 1fr; }
   #servicos, #projetos { padding-block: 80px; }
   .card-projeto { grid-template-columns: 1fr; }
@@ -956,10 +959,8 @@ aside {
 }
 
 @media (max-width: 560px) {
-  .nav-lista { display: none; }
-  .botao-menu-hamburguer { display: flex; }
   #inicio { padding-block-start: 100px; }
-  .grade-hero { display: flex; flex-direction: column; gap: 48px; padding: 40px 0; }
+  .grade-hero { display: flex; flex-direction: column; gap: 48px; padding: 40px 25px 0 25px; }
   .visual-hero { order: -1; width: 100%; }
   .orbe-central { width: 240px; height: 240px; }
   .centro-orbe img { width: 120px; height: 120px; }
