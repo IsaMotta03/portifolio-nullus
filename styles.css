@@ -185,14 +185,33 @@ aside {
   width: 250px;
   height: 100vh;
   background-color: #0e0e1a;
+  z-index: 999;
+  border-top: 1px solid var(--cor-borda);
+  padding: 40px 30px;
+
 }
 
 #navegacao-mobile {
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
-  margin-top: 20px;
+  gap: 28px
+ 
 }
+
+#navegacao-mobile a {
+  font-family: var(--fonte-monoespacada);
+  font-size: 1.15rem;         /* Tamanho ideal para leitura e clique no celular */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cor-texto-muted);
+  transition: color 0.2s;
+  padding-block: 4px;
+}
+
+#navegacao-mobile a:hover {
+  color: var(--cor-marca-roxo);
+}
+
 /* ícone menu escondido */
 .botao-menu-hamburguer {
   display: none;
@@ -393,6 +412,7 @@ aside {
 }
 
 .centro-orbe img {
+  transform: scale(1.35);
   filter: drop-shadow(0 0 24px rgba(168, 85, 247, 0.6));
 }
 
@@ -404,6 +424,7 @@ aside {
 }
 
 .anel-1 {
+  border-color: var(--cor-marca-roxo);
   width: 110%;
   height: 110%;
   top: -5%;
@@ -908,7 +929,7 @@ aside {
 }
 
 .titulo-secao-contato span {
-  color: #a277ff;
+  color: var(--cor-marca-roxo);
 }
 
 .paragrafo-contato {
@@ -995,7 +1016,7 @@ aside {
 .campos-formulario input:focus,
 .campos-formulario select:focus,
 .campos-formulario textarea:focus {
-  border-color: #a277ff;
+  border-color: var(--cor-marca-roxo);
 }
 
 .campos-formulario ::placeholder {
@@ -1024,7 +1045,7 @@ aside {
 
 .formulario-contato button {
   width: 100%;
-  background-color: #a277ff;
+  background-color: var(--cor-marca-roxo);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -1095,7 +1116,7 @@ aside {
   }
 
   .card-imagem-sobre {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 4;
   }
 
   .grade-servicos {
@@ -1152,7 +1173,7 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    padding: 40px 0;
+    padding: 40px 20px;
   }
 
   .visual-hero {
