@@ -45,18 +45,6 @@ body {
   line-height: 1.6;
 }
 
-/* body.custom-cursor-active {
-  cursor: none;
-}
-
-body.custom-cursor-active button,
-body.custom-cursor-active a,
-body.custom-cursor-active select,
-body.custom-cursor-active input,
-body.custom-cursor-active textarea {
-  cursor: none;
-} */
-
 img {
   display: block;
   max-width: 100%;
@@ -79,51 +67,7 @@ a {
   width: 100%;
 }
 
-/* ── 02. Cursor Customizado ── */
-/* #ponteiro-cursor {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background: var(--cor-marca-roxo);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-#anel-cursor {
-  position: fixed;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--cor-roxo-claro);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-  display: none;
-} */
-
 /* ── 03. Efeitos de Fundo & Estrutura ── */
-/* #tela-particulas {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
-} */
-
-/* body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 1;
-} */
-
 header,
 main,
 aside {
@@ -185,7 +129,8 @@ aside {
   border-radius: 6px;
   font-weight: 600;
 }
-/* menu hamburguer*/
+
+/* Menu mobile e hamburguer */
 .menu-mobile {
   display: none;
   top: 70px;
@@ -218,7 +163,6 @@ aside {
   color: var(--cor-marca-roxo);
 }
 
-/* ícone menu escondido */
 .botao-menu-hamburguer {
   display: none;
 }
@@ -296,9 +240,7 @@ aside {
 }
 
 @keyframes sobeVoz {
-  to {
-    transform: translateY(0);
-  }
+  to { transform: translateY(0); }
 }
 
 .descricao-hero {
@@ -597,6 +539,7 @@ aside {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin-top: 80px;
 }
 
 .grade-servicos li {
@@ -610,7 +553,6 @@ aside {
   padding: 28px;
   position: relative;
   transition: border-color 0.3s, transform 0.3s;
-  
   width: 100%;        
   height: 100%;       
   display: flex;      
@@ -863,7 +805,7 @@ aside {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
-  display: inline-block; /* Mantém o comportamento de badge perfeito */
+  display: inline-block; 
 }
 
 .seta-link {
@@ -919,7 +861,7 @@ aside {
 
 .titulo-secao-contato em {
   color: var(--cor-marca-roxo);
-  font-style: normal; /* Sobrescreve o itálico nativo da tag em */
+  font-style: normal; 
 }
 
 .paragrafo-contato {
@@ -965,7 +907,6 @@ aside {
   transition: background-color 0.3s;
 }
 
-/* Base da máscara que define o tamanho e a cor roxa */
 .icone-svg {
   width: 20px;
   height: 20px;
@@ -983,7 +924,6 @@ aside {
   margin: 0;
 }
 
-/* Caminhos para os seus arquivos na pasta images */
 .icone-mail {
   -webkit-mask-image: url('images/mail.svg');
   mask-image: url('images/mail.svg');
@@ -1089,8 +1029,23 @@ aside {
   transform: translateY(-1px);
 }
 
+/* ── Mensagens de Erro do Formulário ── */
 .msg-erro {
   display: none;
+  color: #ff6b6b;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  margin-top: 8px;
+  animation: fadeErro 0.3s ease-in;
+}
+
+.msg-erro.ativo {
+  display: block;
+}
+
+@keyframes fadeErro {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ── 11. Rodapé (Footer) ── */
@@ -1131,26 +1086,15 @@ aside {
   color: #a277ff;
 }
 
-/* Mensagens de Erro do Formulário */
-.msg-erro {
-  display: none;
-  color: #ff6b6b; /* Vermelho suave que contrasta bem no dark mode */
-  font-family: 'DM Mono', monospace;
-  font-size: 0.75rem;
-  margin-top: 8px;
-  animation: fadeErro 0.3s ease-in;
-}
-
-.msg-erro.ativo {
-  display: block;
-}
-
-@keyframes fadeErro {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 /* ── 12. Media Queries & Responsividade ── */
+
+/* Prevenção de Bug no Menu */
+@media (min-width: 769px) {
+  .menu-mobile,
+  .botao-menu-hamburguer {
+    display: none !important;
+  }
+}
 
 @media (max-width: 1024px) {
   .br-desktop {
@@ -1171,6 +1115,7 @@ aside {
     max-width: 100%;
     width: 100%;
   }
+  
   .grade-hero {
     grid-template-columns: 1fr;
     text-align: left;
@@ -1181,7 +1126,7 @@ aside {
   .visual-hero {
     order: -1;
     display: flex;
-    justify-content: center; /* Centraliza apenas o Orbe na linha dele para manter o equilíbrio gráfico */
+    justify-content: center; 
   }
 
   .descricao-hero {
@@ -1198,14 +1143,13 @@ aside {
     grid-template-columns: 1fr;
     gap: 48px;
     text-align: left;
-  
   }
 
   .card-imagem-sobre {
     aspect-ratio: 1 / 1;
     width: 100%;
     max-width: 320px;
-    margin: 0 auto; /* Centraliza o quadrado do logo acima do texto empilhado */
+    margin: 0 auto; 
   }
 
   .lista-skills {
@@ -1221,10 +1165,14 @@ aside {
   .lista-contatos-links {
     align-items: flex-start;
   }
+  
+  .grade-servicos {
+    grid-template-columns: 1fr;
+    margin-top: 60px; 
+  }
 }
 
 @media (max-width: 768px) {
-
   .br-desktop, .br-tablet {
     display: none;
   }
@@ -1244,12 +1192,14 @@ aside {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-.cabecalho-servicos {
+
+  .cabecalho-servicos {
     margin-block-end: 40px; 
   }
+  
   .grade-servicos {
     grid-template-columns: 1fr;
-   margin-top: 0;
+    margin-top: 0;
   }
 
   #sobre,
@@ -1293,6 +1243,7 @@ aside {
   .br-tablet {
     display: none;
   }
+  
   #inicio {
     padding-block-start: 100px;
   }
