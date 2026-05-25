@@ -45,18 +45,6 @@ body {
   line-height: 1.6;
 }
 
-/* body.custom-cursor-active {
-  cursor: none;
-}
-
-body.custom-cursor-active button,
-body.custom-cursor-active a,
-body.custom-cursor-active select,
-body.custom-cursor-active input,
-body.custom-cursor-active textarea {
-  cursor: none;
-} */
-
 img {
   display: block;
   max-width: 100%;
@@ -78,51 +66,6 @@ a {
   padding: 0 20px;
   width: 100%;
 }
-
-/* ── 02. Cursor Customizado ── */
-/* #ponteiro-cursor {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background: var(--cor-marca-roxo);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-#anel-cursor {
-  position: fixed;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--cor-roxo-claro);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-  display: none;
-} */
-
-/* ── 03. Efeitos de Fundo & Estrutura ── */
-/* #tela-particulas {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
-} */
-
-/* body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 1;
-} */
 
 header,
 main,
@@ -244,7 +187,7 @@ aside {
   width: 100%;
 }
 
-.subtitulo-tecnico {
+/* .subtitulo-tecnico {
   font-family: 'DM Mono', monospace;
   font-size: 0.85rem;
   color: #7b59bf;
@@ -259,7 +202,7 @@ aside {
   width: 28px;
   height: 1px;
   background: var(--cor-marca-roxo);
-}
+} */
 
 .titulo-principal {
   font-size: clamp(2.8rem, 6vw, 5.2rem);
@@ -670,9 +613,9 @@ aside {
   padding: 100px 0;
 }
 
-.alinhamento-secao {
+/* .alinhamento-secao {
   margin-bottom: 60px;
-}
+} */
 
 .cabecalho-projetos {
   display: flex;
@@ -1089,9 +1032,9 @@ aside {
   transform: translateY(-1px);
 }
 
-.msg-erro {
+/* .msg-erro {
   display: none;
-}
+} */
 
 /* ── 11. Rodapé (Footer) ── */
 .rodape-site {
