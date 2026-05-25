@@ -37,7 +37,7 @@ body {
   line-height: 1.6;
 }
 
-body.custom-cursor-active {
+/* body.custom-cursor-active {
   cursor: none;
 }
 
@@ -47,7 +47,7 @@ body.custom-cursor-active select,
 body.custom-cursor-active input,
 body.custom-cursor-active textarea {
   cursor: none;
-}
+} */
 
 img {
   display: block;
@@ -72,7 +72,7 @@ a {
 }
 
 /* ── 02. Cursor Customizado ── */
-#ponteiro-cursor {
+/* #ponteiro-cursor {
   position: fixed;
   width: 12px;
   height: 12px;
@@ -95,18 +95,18 @@ a {
   transform: translate(-50%, -50%);
   opacity: 0.5;
   display: none;
-}
+} */
 
 /* ── 03. Efeitos de Fundo & Estrutura ── */
-#tela-particulas {
+/* #tela-particulas {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   opacity: 0.55;
-}
+} */
 
-body::before {
+/* body::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -114,7 +114,7 @@ body::before {
   opacity: 0.03;
   pointer-events: none;
   z-index: 1;
-}
+} */
 
 header,
 main,
