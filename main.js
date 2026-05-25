@@ -134,18 +134,23 @@ const mensagem = document.getElementById("mensagem");
 
 formulario.addEventListener("submit", (event) => {
 
-  event.preventDefault();
-
+  // Checa um campo por vez. Se achar erro, trava o envio e avisa.
   if (nome.value === "") {
+    event.preventDefault(); 
     alert("Preencha o nome");
-  }
-
-  if (email.value === "") {
+  } 
+  else if (email.value === "") {
+    event.preventDefault();
     alert("Preencha o email");
-  }
-
-  if (mensagem.value === "") {
+  } 
+  else if (mensagem.value === "") {
+    event.preventDefault();
     alert("Preencha a mensagem");
+  } 
+  else {
+    // Se passar por tudo sem erro, cai aqui!
+    event.preventDefault(); // Mantemos isso só para a página não recarregar durante a sua apresentação
+    alert("Mensagem enviada com sucesso!");
   }
 
 });

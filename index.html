@@ -11,15 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400..800&display=swap"
     rel="stylesheet">
 
-
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-  <!-- <i id="ponteiro-cursor" aria-hidden="true"></i>
-  <i id="anel-cursor" aria-hidden="true"></i> -->
-  <!-- <canvas id="tela-particulas" aria-hidden="true"></canvas> -->
 
   <header class="cabecalho-site">
     <nav class="container nav-interna" aria-label="Navegação principal">
@@ -78,7 +73,6 @@
           </nav>
 
           <dl class="bloco-estatisticas">
-            <dt class="sr-only">Estatisticas</dt>
 
             <dd class="item-numero"><strong>X+</strong> <small>Projetos</small></dd>
             <dd class="item-numero"><strong>X+</strong> <small>Anos exp.</small></dd>
@@ -138,7 +132,7 @@
           <header>
             <p class="subtitulo-tecnico-contato">Sobre nós</p>
             <h2 id="titulo-sobre" class="titulo-secao">
-              Tecnologia<br>que parte<br>do <mark>zero.</mark>
+               Tecnologia<br class="br-desktop">que parte<br class="br-desktop"><br class="br-tablet">do <mark>zero.</mark>
             </h2>
           </header>
           <p class="texto-destaque">
@@ -164,13 +158,14 @@
       <article class="container">
         <header class="cabecalho-servicos">
           <p class="subtitulo-tecnico-contato">O que fazemos</p>
-          <h2 id="titulo-servicos" class="titulo-secao">Serviços que movem em velocidade máxima.</h2>
+         <h2 id="titulo-servicos" class="titulo-secao">
+            Serviços que<br class="br-desktop"> movem em<br class="br-desktop"><br class="br-tablet"> <mark>velocidade máxima.</mark>
+        </h2>
         </header>
-
-        <ul class="grade-servicos">
+        <ul class="grade-servicos" role="list">
           <li>
             <article class="card-servico">
-              <span class="numero-servico">01</span>
+              <p class="numero-servico">01</p>
               <header>
                 <i class="icone-servico" aria-hidden="true">🚀</i>
                 <h3>Websites de Alta Performance</h3>
@@ -182,7 +177,7 @@
 
           <li>
             <article class="card-servico">
-              <span class="numero-servico">02</span>
+              <p class="numero-servico">02</p>
               <header>
                 <i class="icone-servico" aria-hidden="true">📱</i>
                 <h3>Desenvolvimento Responsivo</h3>
@@ -194,7 +189,7 @@
 
           <li>
             <article class="card-servico">
-              <span class="numero-servico">03</span>
+              <p class="numero-servico">03</p>
               <header>
                 <i class="icone-servico" aria-hidden="true">🎨</i>
                 <h3>UI/UX para Sistemas</h3>
@@ -210,31 +205,31 @@
     <section id="projetos" aria-labelledby="titulo-projetos">
       <article class="container">
         <header class="cabecalho-projetos">
-          <div>
+          <hgroup>
             <p class="subtitulo-tecnico-contato">Portfólio</p>
             <h2 id="titulo-projetos" class="titulo-secao">Projetos que<br><mark>falam por si.</mark></h2>
-          </div>
+          </hgroup>
           <a href="#contato" class="botao botao-fantasma">Iniciar Projeto →</a>
         </header>
 
-        <ul class="lista-projetos">
+        <ul class="lista-projetos" role="list">
           <li>
             <article class="card-projeto">
               <figure class="figura-projeto">
                 <img src="images/telinha.svg"
                   alt="Ilustração de uma tela de computador com gráficos e código, representando um projeto de desenvolvimento web">
               </figure>
-              <div class="conteudo-projeto">
-                <figcaption class="badge-projeto">Em destaque</figcaption>
+              <section class="conteudo-projeto">
+                <p class="badge-projeto">Em destaque</p>
                 <h3>Nullus Desempenho Máximo</h3>
                 <p>Desenvolvimento de portfólio imersivo com animações fluidas e renderização em alta velocidade.</p>
-                <ul class="tags-projeto">
+                <ul class="tags-projeto" role="list">
                   <li>HTML5</li>
                   <li>CSS3</li>
                   <li>JS</li>
                 </ul>
                 <a href="#" class="botao botao-primario link-projeto">Ver projetos →</a>
-              </div>
+              </section>
             </article>
           </li>
         </ul>
@@ -242,23 +237,23 @@
 
     </section>
 
-    <section id="projetos" aria-labelledby="titulo-projetos">
+    <section id="lista-projetos-secundarios" aria-label="Lista de links adicionais de projetos">
       <article class="container">
 
         <ul class="lista-projetos-links" role="list">
 
           <li class="item-projeto-link">
-            <span class="numero-id">001</span>
+            <p class="numero-id">001</p>
 
             <section class="bloco-info-projeto">
               <header class="header-projeto-item">
                 <h3 class="nome-projeto-item">VAGGO</h3>
-                <span class="ano-projeto-item">2025</span>
+                <time class="ano-projeto-item" datetime="2025">2025</time>
               </header>
               <footer class="tags-projeto-item">
-                <span class="tag-link">HTML</span>
-                <span class="tag-link">CSS</span>
-                <span class="tag-link">JS</span>
+                <p class="tag-link">HTML</p>
+                <p class="tag-link">CSS</p>
+                <p class="tag-link">JS</p>
               </footer>
             </section>
 
@@ -266,17 +261,17 @@
           </li>
 
           <li class="item-projeto-link">
-            <span class="numero-id">002</span>
+            <p class="numero-id">002</p>
 
             <section class="bloco-info-projeto">
               <header class="header-projeto-item">
                 <h3 class="nome-projeto-item">CUIDA+</h3>
-                <span class="ano-projeto-item">2026</span>
+                <time class="ano-projeto-item" datetime="2026">2026</time>
               </header>
               <footer class="tags-projeto-item">
-                <span class="tag-link">HTML</span>
-                <span class="tag-link">CSS</span>
-                <span class="tag-link">JS</span>
+                <p class="tag-link">HTML</p>
+                <p class="tag-link">CSS</p>
+                <p class="tag-link">JS</p>
               </footer>
             </section>
 
@@ -294,7 +289,7 @@
           <header>
             <p class="subtitulo-tecnico-contato">Contato</p>
             <h2 id="titulo-contato" class="titulo-secao-contato">
-              Vamos construir algo <span>incrível?</span>
+              Vamos construir algo <em class="destaque-roxo">incrível?</em>
             </h2>
           </header>
           <p class="paragrafo-contato">
@@ -305,20 +300,26 @@
           <ul class="lista-contatos-links" role="list">
             <li>
               <a href="mailto:contato@nullus.dev" aria-label="Enviar e-mail para contato@nullus.dev">
-                <i class="quadrado-decorativo" aria-hidden="true"></i>
-                <span>contato@nullus.dev</span>
+                <i class="quadrado-decorativo" aria-hidden="true">
+                  <i class="icone-svg icone-mail"></i>
+                </i>
+                <p>contato@nullus.dev</p>
               </a>
             </li>
             <li>
               <a href="https://linkedin.com/in/nullus" target="_blank" rel="noopener" aria-label="Acessar LinkedIn">
-                <i class="quadrado-decorativo" aria-hidden="true"></i>
-                <span>ln.com/nullus</span>
+                <i class="quadrado-decorativo" aria-hidden="true">
+                  <i class="icone-svg icone-linkedin"></i>
+                </i>
+                <p>ln.com/nullus</p>
               </a>
             </li>
             <li>
               <a href="https://github.com/nullus" target="_blank" rel="noopener" aria-label="Acessar GitHub">
-                <i class="quadrado-decorativo" aria-hidden="true"></i>
-                <span>github.com/nullus</span>
+                <i class="quadrado-decorativo" aria-hidden="true">
+                  <i class="icone-svg icone-github"></i>
+                </i>
+                <p>github.com/nullus</p>
               </a>
             </li>
           </ul>
@@ -348,7 +349,7 @@
                 <option value="" disabled selected>Selecione um serviço</option>
                 <option value="frontend">Desenvolvimento Front-end</option>
                 <option value="uiux">UI/UX Design</option>
-                <option value="design-system">Design System / Refatoração</option>
+                <option value="design-system">Design System </option>
               </select>
             </p>
 

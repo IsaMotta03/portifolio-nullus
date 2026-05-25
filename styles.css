@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+.br-desktop {
+  display: block;
+}
+
+.br-tablet {
+  display: none;
+}
+
 :root {
   --cor-fundo: #080810;
   --cor-fundo-secundario: #0e0e1a;
@@ -188,19 +196,17 @@ aside {
   z-index: 999;
   border-top: 1px solid var(--cor-borda);
   padding: 40px 30px;
-
 }
 
 #navegacao-mobile {
   display: flex;
   flex-direction: column;
   gap: 28px
- 
 }
 
 #navegacao-mobile a {
   font-family: var(--fonte-monoespacada);
-  font-size: 1.15rem;         /* Tamanho ideal para leitura e clique no celular */
+  font-size: 1.15rem;         
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--cor-texto-muted);
@@ -217,15 +223,6 @@ aside {
   display: none;
 }
 
-/* ícone menu aparece apenas no celular */
-@media (max-width: 768px) {
-
-  .botao-menu-hamburguer {
-    display: block;
-  }
-
-}
-
 /* ── 05. Hero Section ── */
 #inicio {
   min-height: 100svh;
@@ -238,7 +235,7 @@ aside {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  padding: 80px 20px;
+  padding-block: 80px;
   align-items: center;
 }
 
@@ -449,35 +446,17 @@ aside {
 }
 
 @keyframes flutuacao-orbe {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-18px) rotate(3deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
 }
 
 @keyframes rotacao-giro {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes pulsacao-anel {
-
-  0%,
-  100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.1;
-    transform: scale(1.04);
-  }
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.1; transform: scale(1.04); }
 }
 
 /* ── 06. Marquee (Letreiro) ── */
@@ -513,9 +492,7 @@ aside {
 }
 
 @keyframes rolaFaixa {
-  to {
-    transform: translateX(-50%);
-  }
+  to { transform: translateX(-50%); }
 }
 
 /* ── 07. Sobre ── */
@@ -534,23 +511,19 @@ aside {
   background: var(--cor-fundo-secundario);
   border: 1px solid var(--cor-borda);
   border-radius: 20px;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1; 
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-}
-
-.card-imagem-sobre::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 60%, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+  overflow: visible; 
+  padding: 30px;
 }
 
 .card-imagem-sobre img {
-  width: 60%;
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
   opacity: 0.85;
   position: relative;
   z-index: 1;
@@ -611,11 +584,11 @@ aside {
 }
 
 .cabecalho-servicos {
-  margin-block-end: 64px;
+  margin-block-end: 80px; 
 }
 
 .cabecalho-servicos .titulo-secao {
-  max-width: 700px;
+  max-width: 950px; 
   margin-block-start: 16px;
   margin-block-end: 0;
 }
@@ -626,6 +599,10 @@ aside {
   gap: 24px;
 }
 
+.grade-servicos li {
+  display: flex; 
+}
+
 .card-servico {
   background: var(--cor-fundo-secundario);
   border: 1px solid var(--cor-borda);
@@ -633,6 +610,11 @@ aside {
   padding: 28px;
   position: relative;
   transition: border-color 0.3s, transform 0.3s;
+  
+  width: 100%;        
+  height: 100%;       
+  display: flex;      
+  flex-direction: column;
 }
 
 .card-servico:hover {
@@ -648,6 +630,7 @@ aside {
   font-size: 0.72rem;
   color: var(--cor-texto-muted);
   letter-spacing: 0.1em;
+  margin: 0;
 }
 
 .icone-servico {
@@ -699,12 +682,12 @@ aside {
   margin-block-end: 64px;
 }
 
-.cabecalho-projetos .titulo-secao {
+.cabecalho-projetos hgroup .titulo-secao {
   margin-block-start: 16px;
   margin-block-end: 0;
 }
 
-.cabecalho-projetos .titulo-secao mark {
+.cabecalho-projetos hgroup .titulo-secao mark {
   background: none;
   color: var(--cor-marca-roxo);
 }
@@ -758,6 +741,7 @@ aside {
   border-radius: 999px;
   padding: 6px 18px;
   width: fit-content;
+  margin: 0;
 }
 
 .conteudo-projeto h3 {
@@ -824,6 +808,8 @@ aside {
   color: #7b59bf;
   letter-spacing: 2px;
   min-width: 140px;
+  margin: 0;
+  display: inline-block;
 }
 
 .bloco-info-projeto {
@@ -855,6 +841,7 @@ aside {
   font-family: 'DM Mono', monospace;
   font-size: 1rem;
   color: #4a3b68;
+  display: inline-block;
 }
 
 .tags-projeto-item {
@@ -875,6 +862,8 @@ aside {
   border-radius: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin: 0;
+  display: inline-block; /* Mantém o comportamento de badge perfeito */
 }
 
 .seta-link {
@@ -928,8 +917,9 @@ aside {
   letter-spacing: -1px;
 }
 
-.titulo-secao-contato span {
+.titulo-secao-contato em {
   color: var(--cor-marca-roxo);
+  font-style: normal; /* Sobrescreve o itálico nativo da tag em */
 }
 
 .paragrafo-contato {
@@ -969,8 +959,44 @@ aside {
   height: 42px;
   background-color: #1b142c;
   border-radius: 8px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s;
+}
+
+/* Base da máscara que define o tamanho e a cor roxa */
+.icone-svg {
+  width: 20px;
+  height: 20px;
+  background-color: #a277ff; 
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  display: inline-block;
+}
+
+.lista-contatos-links p {
+  margin: 0;
+}
+
+/* Caminhos para os seus arquivos na pasta images */
+.icone-mail {
+  -webkit-mask-image: url('images/mail.svg');
+  mask-image: url('images/mail.svg');
+}
+
+.icone-linkedin {
+  -webkit-mask-image: url('images/linkedin.svg');
+  mask-image: url('images/linkedin.svg');
+}
+
+.icone-github {
+  -webkit-mask-image: url('images/github.svg');
+  mask-image: url('images/github.svg');
 }
 
 /* Formulário de Contato */
@@ -1051,7 +1077,7 @@ aside {
   border-radius: 8px;
   padding: 18px;
   font-family: 'Syne', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
@@ -1105,26 +1131,131 @@ aside {
   color: #a277ff;
 }
 
+/* Mensagens de Erro do Formulário */
+.msg-erro {
+  display: none;
+  color: #ff6b6b; /* Vermelho suave que contrasta bem no dark mode */
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  margin-top: 8px;
+  animation: fadeErro 0.3s ease-in;
+}
+
+.msg-erro.ativo {
+  display: block;
+}
+
+@keyframes fadeErro {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* ── 12. Media Queries & Responsividade ── */
-@media (max-width: 720px) {
 
+@media (max-width: 1024px) {
+  .br-desktop {
+    display: none;
+  }
+
+  .br-tablet {
+    display: block;
+  }
+
+  .titulo-secao {
+    font-size: 2.4rem;
+    max-width: 100%;
+  }
+
+  .cabecalho-servicos .titulo-secao {
+    font-size: 2.1rem;
+    max-width: 100%;
+    width: 100%;
+  }
+  .grade-hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 48px;
+    padding-block: 60px;
+  }
+
+  .visual-hero {
+    order: -1;
+    display: flex;
+    justify-content: center; /* Centraliza apenas o Orbe na linha dele para manter o equilíbrio gráfico */
+  }
+
+  .descricao-hero {
+    margin-inline: 0;
+    max-width: 100%;
+  }
+
+  .botoes-acao-hero,
+  .bloco-estatisticas {
+    justify-content: flex-start;
+  }
+
+  .grade-sobre {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: left;
+  
+  }
+
+  .card-imagem-sobre {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto; /* Centraliza o quadrado do logo acima do texto empilhado */
+  }
+
+  .lista-skills {
+    justify-content: flex-start; 
+  }
+
+  .grade-contato {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: left; 
+  }
+
+  .lista-contatos-links {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .br-desktop, .br-tablet {
+    display: none;
+  }
+
+  .botao-menu-hamburguer {
+    display: block;
+  }
+
+  .nav-lista {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
   .grade-sobre,
   .grade-contato {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
-  .card-imagem-sobre {
-    aspect-ratio: 4 / 4;
+.cabecalho-servicos {
+    margin-block-end: 40px; 
   }
-
   .grade-servicos {
     grid-template-columns: 1fr;
+   margin-top: 0;
   }
 
+  #sobre,
   #servicos,
-  #projetos {
+  #projetos,
+  #contato {
     padding-block: 80px;
   }
 
@@ -1136,6 +1267,7 @@ aside {
     border-inline-end: none;
     border-block-end: 1px solid var(--cor-borda);
     padding: 40px 24px;
+    justify-content: flex-start;
   }
 
   .cabecalho-projetos {
@@ -1157,28 +1289,12 @@ aside {
 }
 
 @media (max-width: 560px) {
-  .nav-lista {
+  .br-desktop,
+  .br-tablet {
     display: none;
   }
-
-  .botao-menu-hamburguer {
-    display: flex;
-  }
-
   #inicio {
     padding-block-start: 100px;
-  }
-
-  .grade-hero {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    padding: 40px 20px;
-  }
-
-  .visual-hero {
-    order: -1;
-    width: 100%;
   }
 
   .orbe-central {
@@ -1199,13 +1315,11 @@ aside {
   .descricao-hero {
     font-size: 0.88rem;
     max-width: 100%;
-    margin-block-end: 32px;
   }
 
   .botoes-acao-hero,
-  .botao {
+  .formulario-contato button {
     width: 100%;
-    justify-content: center;
   }
 
   .botoes-acao-hero {
@@ -1213,20 +1327,18 @@ aside {
     gap: 12px;
   }
 
+  .botao {
+    width: 100%;
+    justify-content: center;
+  }
+
   .bloco-estatisticas {
     flex-wrap: wrap;
     gap: 24px;
-    margin-block-start: 40px;
-    padding-block-start: 24px;
-    width: 100%;
   }
 
   .item-numero {
     font-size: 1.4rem;
-  }
-
-  .item-numero small {
-    font-size: 0.68rem;
   }
 
   .letreiro-rotativo {
@@ -1237,8 +1349,11 @@ aside {
     gap: 24px;
   }
 
-  #sobre {
-    padding-block: 80px;
+  #sobre,
+  #servicos,
+  #projetos,
+  #contato {
+    padding-block: 60px;
   }
 
   .titulo-secao,
@@ -1251,14 +1366,21 @@ aside {
     gap: 0;
   }
 
+  .rodape-site {
+    padding-block: 40px;
+  }
+
   .rodape-conteudo {
     flex-direction: column;
     gap: 20px;
-    text-align: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .rodape-conteudo nav ul {
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 
@@ -1267,4 +1389,5 @@ aside {
   width: 50px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
