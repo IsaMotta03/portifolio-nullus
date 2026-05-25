@@ -11,25 +11,22 @@ const botao = document.getElementById("botao-hamburguer");
 const menu = document.getElementById("menu-mobile");
 
 botao.addEventListener("click", () => {
-
   if (menu.style.display === "block") {
     menu.style.display = "none";
   } else {
     menu.style.display = "block";
     menu.style.position = "fixed";
   }
-
 });
 
-/* Validação do formulário*/
-
+/* ── Validação do formulário (Simplificada) ── */
 const formulario = document.getElementById("form-contato-web");
-
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const mensagem = document.getElementById("mensagem");
 
-formulario.addEventListener("submit", (event) => {
+if (formulario) {
+  formulario.addEventListener("submit", (event) => {
 
   if (nome.value === "") {
     event.preventDefault(); 
@@ -48,4 +45,5 @@ formulario.addEventListener("submit", (event) => {
     alert("Mensagem enviada com sucesso!");
   }
 
-});
+  });
+}
